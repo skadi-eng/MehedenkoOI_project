@@ -90,7 +90,7 @@ header a:hover {
     text-decoration-color: rgb(18, 189, 69);
 }
 
-header img {
+.imgLogo {
     border-radius: 10px;
     width: 90px;
     height: 75px;
