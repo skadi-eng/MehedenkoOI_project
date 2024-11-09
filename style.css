@@ -1,0 +1,212 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main-products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+}
+
+.product, .product-top {
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border: 2px solid rgb(238, 236, 236);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0px 2px 7px 1.1px;
+    position: relative;
+}
+
+.centring {
+    text-align: center;
+}
+
+.product-text, .product-top-text {
+    color: rgb(75, 75, 75);
+}
+
+.product img, .product-top img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.product h1, .product-top h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.product button, .product-top button {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 30px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgb(12, 124, 46);
+}
+
+.product button:hover, .product-top button:hover {
+    background-color: rgb(18, 189, 69);
+}
+
+.product div, .product-top div {
+    text-align: center;
+}
+
+.product article, .product-top article {
+    text-align: left;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.this-page {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+header a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgb(18, 189, 69);
+}
+
+header img {
+    border-radius: 10px;
+    width: 90px;
+    height: 75px;
+}
+
+header button {
+    font-size: 20px;
+    color: rgb(239, 243, 241);
+    width: 200px;
+    height: 30px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: black;
+}
+
+header button:hover {
+    background-color: rgb(66, 66, 66);
+}
+
+.product-top:after {
+    content: "Top"; 
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    background-color: #ffd104;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.product-top:hover, .product:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.drop {
+    display: none;
+    position: relative;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.drop-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+
+.drop-content a:hover {
+    background-color: #ddd;
+}
+
+.drop:hover .drop-content {
+    display: block;
+}
+
+.dropbutton {
+    
+    background-color: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.dropbutton:hover {
+    background-color: rgb(18, 189, 69);
+}
+
+.drop:hover .drop-content 
+{
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .drop {
+        display: block; 
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; 
+        gap: 20px;
+    }
+
+    .drop {
+        display: none; 
+    }
+}
+
+@media (max-width: 960px) {
+    .product-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 100%;
+    }
+}
